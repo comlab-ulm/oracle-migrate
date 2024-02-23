@@ -97,7 +97,7 @@ async function main(pathToSqlcl, ddlFileName, fileName, username, password, host
         if (insertString) {
             let putString = insertString.join('\n').replace(/TO_CLOB\(q'\[(.+?)]'\)([,\n)])/g,
                 (match, p1, p2) => {
-                    if (p1.match(/]$/)) {
+                    if (p1.match(/]$/) || p1.match(/^\[/)) {
                         return `TO_CLOB(q'#${p1}#')` + p2;
                     }
                     return `TO_CLOB(q'[${p1}]')` + p2;
