@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "**/**.ts",
+    "**/**/**.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
